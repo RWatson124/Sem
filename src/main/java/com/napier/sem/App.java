@@ -28,7 +28,7 @@ public class App {
             System.out.println(myDoc.toJson());
         } catch (Exception e) {
             System.err.println("An error occurred while connecting to the database or processing the document: " + e.getMessage());
-            e.printStackTrace(); // Print the stack trace for debugging
+            //e.printStackTrace(); // Print the stack trace for debugging
         }
     }
 }
