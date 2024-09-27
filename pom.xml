@@ -8,11 +8,19 @@
     <artifactId>seMethods</artifactId>
     <version>0.1.0.1</version>
 
+    <!-- Specify Java version -->
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
+    </properties>
+
     <dependencies>
+        <!-- MongoDB Driver Dependency -->
         <dependency>
             <groupId>org.mongodb</groupId>
             <artifactId>mongodb-driver</artifactId>
-            <version>3.6.4</version>
+            <version>3.6.4</version> <!-- Use a more recent version -->
         </dependency>
     </dependencies>
 
