@@ -8,7 +8,7 @@ import org.bson.Document;
 public class App {
     public static void main(String[] args) {
         // Connect to MongoDB on local system - we're using port 27000
-        try (MongoClient mongoClient = new MongoClient("localhost", 27000)) {
+        try (MongoClient mongoClient = new MongoClient("mongo-dbserver")) {
             // Get a database - will create when we use it
             MongoDatabase database = mongoClient.getDatabase("mydb");
             // Get a collection from the database
@@ -26,7 +26,8 @@ public class App {
             // Check document in collection
             Document myDoc = collection.find().first();
             System.out.println(myDoc.toJson());
-        } catch (Exception e) {
+        }
+        catch (Exception e) {
             System.err.println("An error occurred while connecting to the database or processing the document: " + e.getMessage());
             //e.printStackTrace(); // Print the stack trace for debugging
         }
